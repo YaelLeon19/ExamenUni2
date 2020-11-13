@@ -1,0 +1,100 @@
+main = do
+    verificadia
+
+
+verificadia = do
+    putStrLn("Inserta tu dia del mes")
+    dia <-getLine
+    let dInt = read dia::Int
+
+    if( dInt <= 0 )
+        then do
+        putStrLn("verifica tu dia")
+        verificadia
+    else
+        if( dInt > 31 )
+            then do
+            putStrLn("verifica tu dia")
+            verificadia
+        else do
+            print("Esta bien")
+            verificames   
+
+verificames = do
+    putStrLn("Inserta tu mes")
+    mes <-getLine
+    let mInt = read mes::Int
+
+    if( mInt <= 0 )
+        then do
+        putStrLn("verifica tu mes")
+        verificames
+    else
+        if( mInt > 12 )
+            then do
+            putStrLn("verifica tu mes")
+            verificames
+        else do
+            casos mInt
+
+casos n = do
+    case n of
+       1 -> enero
+       2 -> febrero
+       3 -> marzo
+       4 -> abril
+       5 -> mayo
+       6 -> junio
+       7 -> julio
+       8-> agosto
+       9 -> septiembre
+       10 -> octubre
+       11-> noviemnbre
+       12 -> diciembre
+
+enero = do
+    print("Tu mes es enero y tiene 31 dias")
+
+
+febrero = do
+    print("Tu mes es febrero y tiene 28 dias")
+
+
+marzo = do
+    print("Tu mes es marzo y tiene 31 dias")
+
+
+abril = do
+    print("Tu mes es abril y tiene 30 dias")
+
+
+mayo = do
+    print("Tu mes es mayo y tiene 31 dias")
+
+
+junio = do
+    print("Tu mes es junio y tiene 30 dias")
+
+
+julio = do
+    print("Tu mes es julio y tiene 31 dias")
+
+
+agosto = do
+    print("Tu mes es agosto y tiene 31 dias")
+
+
+septiembre = do
+    print("Tu mes es septiembre y tiene 30 dias")
+
+
+octubre = do
+    print("Tu mes es octubre y tiene 31 dias")
+
+
+noviemnbre = do
+    print("Tu mes es noviemnbre y tiene 31 dias")
+
+
+diciembre = do
+    print("Tu mes es diciembre y tiene 31 dias")
